@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+.chk_1 { 
+    display: none;
+} 
+ 
+.chk_1 + label { 
+    border: 2px solid #C1CACA; 
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); */
+    padding: 9px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    position: relative;
+    margin-right: 10px; 
+} 
+ 
+.chk_1:checked + label ,.chk_1 + label:active { 
+    border: 1px solid rgb(216, 60, 48); 
+} 
+ 
+.chk_1:checked + label:after { 
+    content: '\2714';
+    position: absolute; 
+    top: -2px; 
+    left: 0px; 
+    color: rgb(216, 60, 48); 
+    width: 100%; 
+    text-align: center; 
+    font-size: 1rem; 
+    /*padding: 1px 0 0 0; */
+    vertical-align: top;
+    transform: rotate(10deg);
+} 
+.radio{display: none}
+.radio + label{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    line-height: 18px;
+    text-align: center;
+    /*position: relative;*/
+}
+.radio:checked+label{
+    border: 1px solid rgb(216, 60, 48)
+}
+.radio:checked+label::before{
+    content: '';
+    display: inline-block;
+    /*position: absolute;*/
+    width: 12px; height: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(216, 60, 48);
+}
+</style>
+<body>
+    <div>
+        <input type="checkbox" id="checkbox_a1" class="chk_1" /> 
+        <label for="checkbox_a1"></label>
+    </div>
+    <div>
+        <input type="radio" id="radio1" name="radio" class="radio">
+        <label for="radio1"></label>
+        <input type="radio" id="radio2" name="radio" class="radio">
+        <label for="radio2"></label>
+    </div>
+    
+</body>
+</html>

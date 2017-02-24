@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+#list{
+    width: 100px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    background: #f4f4f4;
+    text-align: center;
+    position: absolute;
+    display: none;
+}
+#list>ul{
+    list-style: none;
+    padding: 0px;
+    margin:0;
+}
+#list>ul>li{
+    font-size: 16px;
+    line-height: 2;
+    cursor: pointer;
+}
+#list>ul>li:hover{
+    background: #999;
+}
+</style>
+<body>
+    <div id="list">
+        <ul>
+            <li class="item">复制</li>
+            <li class="item">粘贴</li>
+        </ul>
+    </div>
+</body>
+<script>
+    window.onload=function(){
+        var list=document.getElementById('list');
+        var w_w=window.innerWidth,w_h=window.innerHeight;
+        document.addEventListener('contextmenu',function(e){
+            e.preventDefault();
+            list.style.display="block"; 
+            var x =e.clientX,
+                y =e.clientY;
+            var w=list.clientWidth,h=list.clientHeight;
+            if(x<50){
+                list.style.left=0+'px';
+                list.style.top=y+'px';
+            }else if(x>=w_w-w){
+                list.style.left=w_w-w-10+'px';
+                list.style.top=y+'px';
+            }else if(y >= (w_h-h-10)){
+                list.style.left = x + 'px';
+                list.style.top = w_h-h-10 + 'px'
+            }else{
+                list.style.left=x+'px';
+                list.style.top=y+'px';
+            }        
+            
+        },false)
+        document.addEventListener('click',function(e){
+            if(event.srcElement.className=="item"){return};
+            list.style.display="none";
+        },false);
+    }
+</script>
+</html>
