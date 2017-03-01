@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .con {
+        width: 900px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .con figcaption h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        color: #fff;
+        opacity: 0;
+        transition: all 1.6s;
+        background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+        /*文字填充色为透明*/
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        background-size: 200% 100%;
+        /* 动画 */
+        -webkit-animation: font-animation 4s infinite linear;
+    }
+    
+    @keyframes font-animation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+    
+    .con img {
+        width: 900px;
+        height: 500px;
+        opacity: 1;
+        transition: opacity 0.35s;
+    }
+    
+    .con figcaption::before,
+    .con figcaption::after {
+        position: absolute;
+        content: '';
+        top: 50px;
+        bottom: 50px;
+        right: 50px;
+        left: 50px;
+    }
+    
+    .con figcaption::before {
+        border-top: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+        transform: scale(0, 1);
+        opacity: 0;
+        transition: all 0.8s;
+    }
+    
+    .con figcaption::after {
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: scale(1, 0);
+        opacity: 0;
+        transition: all 0.8s;
+    }
+    
+    figure.con:hover img{
+        opacity: 0.8;
+    }
+    figure.con:hover h2{opacity: 1}
+    
+    figure.con:hover figcaption::after,
+    figure.con:hover figcaption::before {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+</style>
+
+<body>
+    <figure class="con">
+        <img src="http://om10n1h33.bkt.clouddn.com/bg2.jpg" alt="" />
+        <figcaption>
+            <h2>colorful</h2>
+        </figcaption>
+    </figure>
+</body>
+
+</html>
