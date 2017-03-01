@@ -3,3 +3,5 @@
 * [自定义网页右键菜单](https://dcharlie123.github.io/baiduFE/2017春/自定义网页右键菜单/自定义网页右键菜单.html) 
 * [自定义checkbox，%20radio样式](https://dcharlie123.github.io/baiduFE/2017春/自定义checkbox，%20radio样式/自定义checkbox，%20radio样式.html)
 * [有趣的鼠标悬浮模糊效果](https://dcharlie123.github.io/baiduFE/2017春/有趣的鼠标悬浮模糊效果.html)
+* [Flexbox 布局练习](http://codepen.io/dcharlie2016/pen/evpNja?editors=1100)
+* [定位和居中问题](http://codepen.io/dcharlie2016/pen/aJvvpm)
