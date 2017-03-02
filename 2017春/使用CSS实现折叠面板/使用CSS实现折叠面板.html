@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+    ul li {
+        list-style: none;
+    }
+
+
+    .container {
+        width: 800px;
+        margin: 20px auto;
+    }
+
+
+    .item {
+        width: 100%;
+        border: 1px solid #ddd;
+        margin-bottom: 5px;
+        border-radius: 3px
+    }
+
+
+    .item .title {
+        display: block;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #333;
+        border-bottom: 0;
+        padding: 10px 15px;
+    }
+    .title+input{display: none}
+    .item .content {
+        border-top: 1px solid #ddd;
+        padding: 15px;
+        display: none;
+    }
+    input[type="radio"]:checked+.content{
+        display: block;
+    }
+    .title:hover{
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <ul class="wrap">
+            <li class="item">
+                <label for="title1" class="title">title1</label>
+                <input type="radio" id="title1" name="title" checked>
+                <p class="content">hello world1</p>
+            </li>
+            <li class="item">
+                <label for="title2" class="title">title2</label>
+                <input type="radio" id="title2" name="title">
+                <p class="content">welcome</p>
+            </li>
+            <li class="item">
+                <label for="title3" class="title">title3</label>
+                <input type="radio" id="title3" name="title">
+                <p class="content">I am dcharlie123</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
