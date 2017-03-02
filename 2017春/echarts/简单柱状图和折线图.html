@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/echarts/3.4.0/echarts.js"></script>
+</head>
+<body>
+    <div id="chart" style="width:600px;height: 600px;margin: 50px auto"></div>
+</body>
+<script>
+    var myCharts=echarts.init(document.getElementById('chart'));
+    var option={
+        title:{
+            text:'简单柱状图和折线图',
+            left:'center'
+        },
+        legend:{
+            data:['数量1','数量2'],
+            z:9,
+            top:70,
+            right:70
+        },
+        xAxis:{
+            data:['a','b','c','d','d','e']
+        },
+        yAxis:{},
+        tooltip:{
+            trigger:'item'
+        },
+        series:[
+            {
+                name:'数量1',
+                type:'line',
+                data:[45,73,55,109,99,70]
+            },{
+                name:'数量2',
+                type:'bar',
+                barWidth:40,
+                data:[45,73,55,109,99,70]
+            }
+        ]
+    };
+    myCharts.setOption(option)
+</script>
+</html>
