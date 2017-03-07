@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .container {
+        width: 800px;
+        margin: 20px auto;
+        
+    }
+
+    .item {
+        width: 100%;
+        border: 1px solid #ddd;
+        margin-bottom: 5px;
+        border-radius: 3px
+    }
+    .item .title {
+        display: block;
+        width: 100%;
+        background-color: #f5f5f5;
+        border-bottom: 0;
+        padding: 10px 15px;
+    }
+    .item .title a{
+        color:#333;
+        text-decoration: none;
+    }
+    .item .content {
+        border-top: 1px solid #ddd;
+        /*padding: 15px;*/
+        /*display: none;
+        opacity: 0;*/
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: all 1s;
+        
+    }
+    .wrap :target .content{
+        /*display: block;*/
+        overflow: auto;
+        padding: 15px;
+        min-height: 50px;
+    }
+    .wrap :target .title>a,.title>a:hover{
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <ul class="wrap">
+            <li class="item" id="title1">
+                <h4 class="title"><a href="#title1">title1</a></h4>
+                <p class="content">hello world</p>
+            </li>
+            <li class="item" id="title2">
+                <h4 class="title"><a href="#title2">title2</a></h4>
+                <p class="content">welcome</p>
+            </li>
+            <li class="item" id="title3">
+                <h4 class="title"><a href="#title3">title3</a></h4>
+                <p class="content">hello world1</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
