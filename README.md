@@ -11,3 +11,6 @@
 * [纯CSS仿Bootstrap Collapsible(target版)](https://dcharlie123.github.io/baiduFE/2017春/使用CSS实现折叠面板/用target实现.html)
 * [文字渐变光影流动动画效果](http://codepen.io/dcharlie2016/pen/PpNJLb)
 * [纯CSS评分](http://codepen.io/dcharlie2016/pen/jBXrjv)
+* [圆形进度](http://codepen.io/dcharlie2016/pen/evLpJq)
+* [线段围绕正方形盒子运动](http://codepen.io/dcharlie2016/pen/yMxYLZ)
+* [悬浮](http://codepen.io/dcharlie2016/pen/MpvzbR)
